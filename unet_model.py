@@ -39,6 +39,7 @@ class UNet(nn.Module):
 
         self.final = nn.Conv2d(64, out_channels, kernel_size=1)
 
+
     def forward(self, x):
         e1 = self.encoder1(x)
         e2 = self.encoder2(self.pool(e1))
